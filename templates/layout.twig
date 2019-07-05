@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <!--Icon Font-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <title>BRAND products</title>
+</head>
+
+<body>
+<div id="app">
+{% block header %}
+<header class="header">
+    {{ include('header.twig') }}
+</header>
+<div class="header_block"></div>
+{% endblock %}
+
+{% block main_menu %}
+<div class="main-menu-wrapper">
+    {{ include('main_menu.twig') }}
+</div>
+{% endblock %}
+
+<main>
+    {% block main_content %}
+    {% endblock %}
+</main>
+
+{% block feauter %}
+{% endblock %}
+
+{{ include('subscribe.twig') }}
+
+{{ include('footer.twig') }}
+
+</div>
+
+{{ include('scripts.twig') }}
+</body>
+
+</html>
